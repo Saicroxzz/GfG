@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Videojuegos para Android</title>
+    <link rel="stylesheet" href="../Style/Catalogo.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="Inicio.html">
+                    <img src="../Resource/Img/logo.jpg" alt="Logo de la tienda" class="logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./Xbox.html">Xbox</a></li>
+                    <li><a href="./Playstation.html">Playstation</a></li>
+                    <li><a href="./Pc.html">Pc</a></li>
+                    <li><a href="./Nintendo.html">Nintendo</a></li>
+                    <li><a href="./Android.html">Android</a></li>
+                    <li><a href="./Componentes.html">Tarjetas de Video</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="../templates/Edt_User.html" class="login"><i class="fas fa-user"></i></a>
+                <a href="../Templates/Carrito.html" class="cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="#somos" class="options-icon"><i class="fas fa-cog"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <section class="featured-products">
+            <div class="container">
+                <h2>Videojuegos Para Android</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Minecraft PE', 'Este juegazo nos permitirá explorar mundos generados aleatoriamente y construir cosas maravillosas, desde una simple casa hasta un fastuoso castillo. Podremos jugar en modo creativo con recursos ilimitados o explotar a lo grande el mundo con el modo supervivencia.', '$31.874', '../Resource/Img/pe.jpg')">
+                            <img src="../Resource/Img/pe.jpg" alt="Producto 1">
+                            <h3>Minecraft PE</h3>
+                            <p>$31.874</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Monopoly', 'Este juego ha roto el paso del tiempo y sigue siendo igual de atractivo que hace décadas. Gracias a la era digital y la conectividad de nuestro smartphone, esta versión incluye un videochat multijugador. Puedes abrir una sala, invitar a tus amigos a unirse a tus partidas y jugar juntos.', '$19.235', '../Resource/Img/monopoly.jpg')">
+                            <img src="../Resource/Img/monopoly.jpg" alt="Producto 2">
+                            <h3>Monopoly</h3>
+                            <p>$19.235</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Poppy Playtime Chapter 2', 'Una de las mejores aventuras de terror ha aterrizado en móviles. Poppy PLaytime Chapter 2 nos sumerge en un ambiente tenebroso con el regreso de Huggy Wuggy y de Mommy Long Legs.', '$20.949', '../Resource/Img/popy.jpg')">
+                            <img src="../Resource/Img/popy.jpg" alt="Producto 3">
+                            <h3>Poppy Playtime Chapter 2</h3>
+                            <p>$20.949</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">  
+                        <div class="product" onclick="showProductDetails('Bloons TD 6', 'Crea la defensa perfecta con una combinación increíble de torres, mejoras, héroes y habilidades activadas y luego revienta a todos los bloons invasores. Es un juego del género Torre de Defensa en el que tendremos que hacer lo posible por defender nuestra posición.', '$34.230', '../Resource/Img/td.jpg')">
+                            <img src="../Resource/Img/td.jpg" alt="Producto 4">
+                            <h3>Bloons TD 6</h3>
+                            <p>$34.230</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Geometry Dash', 'Parece mentira que una adaptación del mítico Flappy Bird sea un juego de pago y ocupe el quinto lugar en los más vendidos de Google Play. Pero así es, Geometry Dash ha sido atractivo suficiente para lograrlo. Juego sencillo, de alcance infinito y con un solo toque en la pantalla para hacer avanzar nuestra nave.', '$8.525', '../Resource/Img/geometry.png')">
+                            <img src="../Resource/Img/geometry.png" alt="Producto 5">
+                            <h3>Geometry Dash</h3>
+                            <p>$8.525</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Stardew Valley', 'Stardew Valley es un RPG de vida en el campo! Hereda la vieja granja de tu abuelo en Stardew Valley. Armado con herramientas de segunda mano y algo de dinero, te dispones a empezar tu nueva vida. ¿Podrás aprender a vivir de la tierra y a convertir esos campos de malezas en un hogar próspero? No va a ser fácil. ', '$32.000', '../Resource/Img/stardew.jpg')">
+                            <img src="../Resource/Img/stardew.jpg" alt="Producto 6">
+                            <h3>Stardew Valley</h3>
+                            <p>$32.000</p>
+                        </div>
+                    </div>
+                    <!-- Más productos aquí -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Nombre del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-details-img">
+                        <img src="" alt="Imagen del producto" id="modal-product-img" class="img-fluid">
+                    </div>
+                    <h2 id="modal-product-title">Nombre del Producto</h2>
+                    <p id="modal-product-description">Descripción detallada del producto.</p>
+                    <p id="modal-product-price">Precio: $99.99</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="addToCart()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <section id="somos">
+                <h3>¿Quienes Somos?</h3>
+                <p>Somos 'GFG (Games For Gamers)', una tienda en línea dedicada a ofrecer una amplia gama de videojuegos y componentes para todos los amantes de los juegos. Nuestra pasión por el gaming nos impulsa a brindar la mejor experiencia de compra, con productos de alta calidad y un servicio excepcional.</p>
+            
+                <h2>Nuestro Objetivo</h2>
+            <p>Nuestro objetivo es convertirnos en la tienda favorita de la comunidad gamer, ofreciendo productos innovadores, promociones atractivas y un servicio al cliente que se adapte a las necesidades de nuestros usuarios. En 'GFG', nos esforzamos por mantenernos al día con las tendencias del mercado y proporcionar siempre las mejores opciones para nuestros clientes.</p>
+            
+            </section>
+            <section id="contacto">
+                <h3>Contacto</h3>
+                <p>Email: soportegfg@gmail.com</p>
+                <p>Cel: 312-423-4452</p>
+            </section>
+            <p>&copy; 2024 GFG. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Controllers/Script.js"></script>
+    <script>
+        // Función para mostrar los detalles del producto en un modal
+        function showProductDetails(title, description, price, imgSrc) {
+            // Actualiza los detalles del producto con los datos proporcionados
+            document.getElementById('modal-product-title').innerText = title;
+            document.getElementById('modal-product-description').innerText = description;
+            document.getElementById('modal-product-price').innerText = `Precio: ${price}`;
+            document.getElementById('modal-product-img').src = imgSrc;
+
+            // Actualiza el título del modal
+            document.querySelector('.modal-title').innerText = title;
+
+            // Abre el modal
+            $('#productModal').modal('show');
+        }
+    </script>
+</body>
+</html>

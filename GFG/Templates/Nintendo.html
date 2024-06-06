@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Videojuegos para Pc</title>
+    <link rel="stylesheet" href="../Style/Catalogo.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="Inicio.html">
+                    <img src="../Resource/Img/logo.jpg" alt="Logo de la tienda" class="logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./Xbox.html">Xbox</a></li>
+                    <li><a href="./Playstation.html">Playstation</a></li>
+                    <li><a href="./Pc.html">Pc</a></li>
+                    <li><a href="./Nintendo.html">Nintendo</a></li>
+                    <li><a href="./Android.html">Android</a></li>
+                    <li><a href="./Componentes.html">Tarjetas de Video</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="../templates/Edt_User.html" class="login"><i class="fas fa-user"></i></a>
+                <a href="../Templates/Carrito.html" class="cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <a href="#somos" class="options-icon"><i class="fas fa-cog"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <section class="featured-products">
+            <div class="container">
+                <h2>Videojuegos Para Nintendo Switch</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Mario Kart 8 Deluxe', 'Mario Kart 8 Deluxe es un videojuego de carreras desarrollado y publicado por Nintendo para la consola Nintendo Switch.', '$199.883', '../Resource/Img/mario.avif')">
+                            <img src="../Resource/Img/mario.avif" alt="Producto 1">
+                            <h3>Mario Kart 8 Deluxe</h3>
+                            <p>$199.883</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Animal Crossing: New Horizons', 'Como en entregas previas de la serie Animal Crossing, New Horizons es un videojuego no lineal de simulación de vida a tiempo real. El jugador asume el papel de un personaje personalizable que se mueve por una isla desierta tras comprar un pack de vacaciones a Tom Nook, un mapache recurrente en la serie.', '$279.000', '../Resource/Img/animal.avif')">
+                            <img src="../Resource/Img/animal.avif" alt="Producto 2">
+                            <h3>Animal Crossing: New Horizons</h3>
+                            <p>$279.000</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Super Smash Bros. Ultimate', 'Al igual que sus predecesores, Ultimate incluye una amplia variedad de modos diseñados para un jugador. El modo «Clásico» permite disputar combates al azar en tres tipos de escenario, bien contra la CPU —con nueve niveles de intensidad— o hasta ocho jugadores en la misma consola.', '$279.000', '../Resource/Img/supersmash.avif')">
+                            <img src="../Resource/Img/supersmash.avif" alt="Producto 3">
+                            <h3>Super Smash Bros. Ultimate</h3>
+                            <p>$279.000</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">  
+                        <div class="product" onclick="showProductDetails('The Legend of Zelda: Breath of the Wild', 'Diez mil años antes del comienzo del juego, Hyrule es una civilización avanzada que construyó cuatro enormes máquinas con formas de animales llamadas bestias divinas y una legión de guardianes para protegerse de Ganon. Cuando Ganon regresó, fue derrotado por una princesa con la ayuda de los cuatro campeones y un caballero.', '$329.000', '../Resource/Img/zelda.avif')">
+                            <img src="../Resource/Img/zelda.avif" alt="Producto 4">
+                            <h3>The Legend of Zelda: Breath of the Wild</h3>
+                            <p>$329.000</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Super Mario Odyssey', 'El juego comienza con una historia típica de otros títulos de la serie Mario. El villano Bowser secuestra a la Princesa Peach, pero esta vez con el propósito específico de casarse con ella. Al principio, Mario es derrotado y pierde su sombrero rojo. Pronto, el héroe se encuentra con un sombrero fantasma llamado Cappy, quien le ofrece su ayuda.', '$279.000', '../Resource/Img/odisea.avif')">
+                            <img src="../Resource/Img/odisea.avif" alt="Producto 5">
+                            <h3>Super Mario Odyssey</h3>
+                            <p>$279.000</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="product" onclick="showProductDetails('Pokémon espada y Pokémon escudo', 'Espada y Escudo se llevan a cabo en la región de Galar (una región basada en Reino Unido), una extensión de tierra grande y alta, y una de las muchas regiones del mundo Pokémon. La región en sí y sus muchos puntos de referencia parecen estar fuertemente inspirados por Gran Bretaña.', '$559.000', '../Resource/Img/pokemonjpg.jpg')">
+                            <img src="../Resource/Img/pokemonjpg.jpg" alt="Producto 6">
+                            <h3>Pokémon espada y Pokémon escudo</h3>
+                            <p>$559.000</p>
+                        </div>
+                    </div>
+                    <!-- Más productos aquí -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Nombre del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="product-details-img">
+                        <img src="" alt="Imagen del producto" id="modal-product-img" class="img-fluid">
+                    </div>
+                    <h2 id="modal-product-title">Nombre del Producto</h2>
+                    <p id="modal-product-description">Descripción detallada del producto.</p>
+                    <p id="modal-product-price">Precio: $99.99</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="addToCart()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <section id="somos">
+                <h3>¿Quienes Somos?</h3>
+                <p>Somos 'GFG (Games For Gamers)', una tienda en línea dedicada a ofrecer una amplia gama de videojuegos y componentes para todos los amantes de los juegos. Nuestra pasión por el gaming nos impulsa a brindar la mejor experiencia de compra, con productos de alta calidad y un servicio excepcional.</p>
+                
+                <h2>Nuestro Objetivo</h2>
+            <p>Nuestro objetivo es convertirnos en la tienda favorita de la comunidad gamer, ofreciendo productos innovadores, promociones atractivas y un servicio al cliente que se adapte a las necesidades de nuestros usuarios. En 'GFG', nos esforzamos por mantenernos al día con las tendencias del mercado y proporcionar siempre las mejores opciones para nuestros clientes.</p>
+            </section>
+            <section id="contacto">
+                <h3>Contacto</h3>
+                <p>Email: soportegfg@gmail.com</p>
+                <p>Cel: 312-423-4452</p>
+            </section>
+            <p>&copy; 2024 GFG. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../Controllers/Script.js"></script>
+    <script>
+        // Función para mostrar los detalles del producto en un modal
+        function showProductDetails(title, description, price, imgSrc) {
+            // Actualiza los detalles del producto con los datos proporcionados
+            document.getElementById('modal-product-title').innerText = title;
+            document.getElementById('modal-product-description').innerText = description;
+            document.getElementById('modal-product-price').innerText = `Precio: ${price}`;
+            document.getElementById('modal-product-img').src = imgSrc;
+
+            // Actualiza el título del modal
+            document.querySelector('.modal-title').innerText = title;
+
+            // Abre el modal
+            $('#productModal').modal('show');
+        }
+    </script>
+</body>
+</html>
